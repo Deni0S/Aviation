@@ -38,7 +38,7 @@
 		0343B0A423140E9200470174 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		03C134BF2309CFC4007A0911 /* Aviation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C134C22309CFC4007A0911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03C134C42309CFC4007A0911 /* PFDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFDViewController.swift; sourceTree = "<group>"; };
+		03C134C42309CFC4007A0911 /* PFDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFDViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		03C134C72309CFC4007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03C134C92309CFC6007A0911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C134CC2309CFC6007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };

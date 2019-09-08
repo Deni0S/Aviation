@@ -25,27 +25,26 @@
                                 <rect key="frame" x="100" y="120" width="170" height="548"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McQ-Ab-2zK" userLabel="Speed Ruler UIView">
-                                        <rect key="frame" x="90" y="0.0" width="80" height="548"/>
+                                        <rect key="frame" x="0.0" y="-6903" width="170" height="7202"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speed" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-3m-xvA" userLabel="Ruler">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="548"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="H90-A1-rgX"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="7202"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="PGM-3m-xvA" secondAttribute="trailing" id="2YG-Cz-3iJ"/>
                                             <constraint firstItem="PGM-3m-xvA" firstAttribute="top" secondItem="McQ-Ab-2zK" secondAttribute="top" id="2ul-0N-Mnm"/>
                                             <constraint firstAttribute="bottom" secondItem="PGM-3m-xvA" secondAttribute="bottom" id="PLM-7W-7Qd"/>
+                                            <constraint firstAttribute="width" constant="170" id="ZP4-Dv-tOA"/>
                                             <constraint firstItem="PGM-3m-xvA" firstAttribute="leading" secondItem="McQ-Ab-2zK" secondAttribute="leading" id="mtQ-3U-m3f"/>
+                                            <constraint firstAttribute="height" constant="7202" id="tNA-nI-oSb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-hM-A5T" userLabel="Speed Indicator UIView">
                                         <rect key="frame" x="0.0" y="229" width="150" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-VU-O5f" userLabel="Indicator">
-                                                <rect key="frame" x="20" y="9" width="72" height="72"/>
+                                                <rect key="frame" x="20" y="9" width="80" height="72"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +52,7 @@
                                             </label>
                                             <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="635-ky-OlS" userLabel="Picker">
                                                 <rect key="frame" x="100" y="0.0" width="50" height="90"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" label="ko">
                                                     <bool key="isElement" value="YES"/>
@@ -75,7 +74,7 @@
                                             <constraint firstItem="635-ky-OlS" firstAttribute="centerY" secondItem="tkV-hM-A5T" secondAttribute="centerY" id="90N-JV-BKv"/>
                                             <constraint firstItem="NVH-VU-O5f" firstAttribute="centerY" secondItem="tkV-hM-A5T" secondAttribute="centerY" id="PNS-JA-SDs"/>
                                             <constraint firstAttribute="width" constant="150" id="eJS-7M-SA4"/>
-                                            <constraint firstItem="635-ky-OlS" firstAttribute="leading" secondItem="NVH-VU-O5f" secondAttribute="trailing" constant="8" symbolic="YES" id="gBu-bn-isn"/>
+                                            <constraint firstItem="635-ky-OlS" firstAttribute="leading" secondItem="NVH-VU-O5f" secondAttribute="trailing" id="gBu-bn-isn"/>
                                             <constraint firstItem="635-ky-OlS" firstAttribute="top" secondItem="tkV-hM-A5T" secondAttribute="top" id="izq-X1-RzX"/>
                                             <constraint firstAttribute="height" constant="90" id="kAb-eB-xkm"/>
                                             <constraint firstAttribute="bottom" secondItem="635-ky-OlS" secondAttribute="bottom" id="mDa-Jj-lW2"/>
@@ -92,9 +91,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16919812817258884" green="0.079263078052738301" blue="0.16220822413329813" alpha="0.32838613013698637" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="McQ-Ab-2zK" secondAttribute="bottom" id="45q-4H-SVh"/>
+                                    <constraint firstAttribute="centerY" secondItem="McQ-Ab-2zK" secondAttribute="bottom" constant="-25" id="45q-4H-SVh"/>
                                     <constraint firstAttribute="trailing" secondItem="McQ-Ab-2zK" secondAttribute="trailing" id="YPl-VZ-0xb"/>
-                                    <constraint firstItem="McQ-Ab-2zK" firstAttribute="centerY" secondItem="DbN-H5-hMG" secondAttribute="centerY" id="fJ2-Hm-kF5"/>
                                     <constraint firstItem="tkV-hM-A5T" firstAttribute="centerY" secondItem="DbN-H5-hMG" secondAttribute="centerY" id="fhf-6m-TfY"/>
                                     <constraint firstItem="tkV-hM-A5T" firstAttribute="leading" secondItem="DbN-H5-hMG" secondAttribute="leading" id="jbj-ki-QQQ"/>
                                     <constraint firstAttribute="width" constant="170" id="nCX-Js-Mhn"/>
@@ -146,8 +144,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="SpeedIndicatorPicker" destination="635-ky-OlS" id="7m3-y5-Cf9"/>
                         <outlet property="skyline" destination="fLn-PS-afH" id="9kT-EA-BQ3"/>
+                        <outlet property="speedIndicatorPicker" destination="635-ky-OlS" id="UaR-DH-Ei2"/>
                         <outlet property="speedIndicatorSmall" destination="NVH-VU-O5f" id="MAT-Cu-j5n"/>
                         <outlet property="speedRuler" destination="PGM-3m-xvA" id="rsN-Xa-eQ6"/>
                         <outlet property="speedRulerUIView" destination="McQ-Ab-2zK" id="HML-fV-5zQ"/>
@@ -155,11 +153,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94.3359375" y="-149.21875"/>
+            <point key="canvasLocation" x="-299" y="-210"/>
         </scene>
     </scenes>
     <resources>
         <image name="Skyline" width="1000" height="500"/>
-        <image name="Speed" width="65" height="256"/>
+        <image name="Speed" width="85" height="3601"/>
     </resources>
 </document>
