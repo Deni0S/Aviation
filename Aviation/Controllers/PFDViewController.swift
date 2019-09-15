@@ -19,20 +19,23 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             speedIndicatorPicker.dataSource = self
         }
     }
+    @IBOutlet weak var trendSpeedUIView: UIView!
+    @IBOutlet weak var trendSpeed: UIImageView!
     
     var timeInterval: Double = 0.1
-    var timeAnimation: Double = 21
-    var centerOfActionView = CGPoint()
+    var timeAnimation: Double = 7
     var speed: Int = 0
     var speedPicker: [String] = ["0","9","8","7","6","5","4","3","2","1","0","9"]
-    var centerX: Int = 0
-    var centerY: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.centerX = Int(self.speedRulerUIView.center.x)
-        self.centerY = Int(self.speedRulerUIView.center.y)
-        debugPrint(centerX,centerY)
+        // Скрыть/Показать точку тренда на начальном экране
+        self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: 0)
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        sleep(2)
         speedIndicatorAction()
     }
     
@@ -48,7 +51,8 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                                    delay: 0,
                                    options: UIView.AnimationOptions.curveLinear,
                                    animations: {
-                                    self.speedRulerUIView.center = CGPoint(x: self.centerX, y: self.centerY+10*self.speed)
+                                    self.speedRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(10*self.speed))
+                                    self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: CGFloat(2*self.speed)).translatedBy(x: 0, y: -0.5)
                     })
                 }
             }
@@ -64,7 +68,8 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                                    delay: 0,
                                    options: UIView.AnimationOptions.curveLinear,
                                    animations: {
-                                    self.speedRulerUIView.center = CGPoint(x: self.centerX, y: self.centerY+10*self.speed)
+                                    self.speedRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(10*self.speed))
+                                    self.trendSpeedUIView.transform = CGAffineTransform(scaleX: 1, y: CGFloat(-2*self.speed)).translatedBy(x: 0, y: -0.5)
                     })
                 }
             }
