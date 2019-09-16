@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0343B0A523140E9200470174 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343B0A423140E9200470174 /* UIView+Layer.swift */; };
 		03C134C32309CFC4007A0911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C22309CFC4007A0911 /* AppDelegate.swift */; };
-		03C134C52309CFC4007A0911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C42309CFC4007A0911 /* ViewController.swift */; };
+		03C134C52309CFC4007A0911 /* PFDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C42309CFC4007A0911 /* PFDViewController.swift */; };
 		03C134C82309CFC4007A0911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C62309CFC4007A0911 /* Main.storyboard */; };
 		03C134CA2309CFC6007A0911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C92309CFC6007A0911 /* Assets.xcassets */; };
 		03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0343B0A423140E9200470174 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		03C134BF2309CFC4007A0911 /* Aviation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C134C22309CFC4007A0911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03C134C42309CFC4007A0911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03C134C42309CFC4007A0911 /* PFDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFDViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		03C134C72309CFC4007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03C134C92309CFC6007A0911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C134CC2309CFC6007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0343B0A123140B7100470174 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */,
+				03C134C62309CFC4007A0911 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0343B0A223140B8100470174 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0343B0A423140E9200470174 /* UIView+Layer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0343B0A323140BA800470174 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03C134C42309CFC4007A0911 /* PFDViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0343B0A723141C3D00470174 /* Wi-Fi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Wi-Fi";
+			sourceTree = "<group>";
+		};
 		03C134B62309CFC4007A0911 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				03C134C22309CFC4007A0911 /* AppDelegate.swift */,
-				03C134C42309CFC4007A0911 /* ViewController.swift */,
-				03C134C62309CFC4007A0911 /* Main.storyboard */,
+				0343B0A123140B7100470174 /* Views */,
+				0343B0A323140BA800470174 /* Controllers */,
+				0343B0A723141C3D00470174 /* Wi-Fi */,
+				0343B0A223140B8100470174 /* Helpers */,
 				03C134C92309CFC6007A0911 /* Assets.xcassets */,
-				03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */,
 				03C134CE2309CFC6007A0911 /* Info.plist */,
 			);
 			path = Aviation;
@@ -256,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C134C52309CFC4007A0911 /* ViewController.swift in Sources */,
+				03C134C52309CFC4007A0911 /* PFDViewController.swift in Sources */,
+				0343B0A523140E9200470174 /* UIView+Layer.swift in Sources */,
 				03C134C32309CFC4007A0911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BDI.Aviation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -460,7 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BDI.Aviation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
