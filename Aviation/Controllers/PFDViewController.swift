@@ -22,59 +22,76 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var trendSpeedUIView: UIView!
     @IBOutlet weak var trendSpeed: UIImageView!
     
-    var timeInterval: Double = 0.1
-    var timeAnimation: Double = 7
+    var timeIntervalData: Double = 0.1
+    var timeAnimation: Double = 14
     var speed: Int = 0
+    var trend: Double = 0.0
     var speedPicker: [String] = ["0","9","8","7","6","5","4","3","2","1","0","9"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Скрыть/Показать точку тренда на начальном экране
-        self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: 0)
+        // Скрыть точку тренда на начальном экране
+        trendSpeedUIView.transform.scaledBy(x: 1, y: 0)
     }
         
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        sleep(2)
-        speedIndicatorAction()
+        demoActionPFD()
     }
     
-    // Действия индикторов скорости
-    func speedIndicatorAction() {
+    // Запустить демонстрацию работы PFD
+    func demoActionPFD() {
         DispatchQueue.global().async {
-            Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { timer in
+            var speedUP = 0
+            Timer.scheduledTimer(withTimeInterval: self.timeIntervalData, repeats: true) { timer in
+                self.speed += speedUP
                 DispatchQueue.main.async {
-                    self.speed += 1
-                    self.speedIndicatorSmall.text = "\(self.speed/10)"
-                    self.speedIndicatorPicker.selectRow(10-self.speed%10, inComponent: 0, animated: false)
-                    UIView.animate(withDuration: self.timeInterval,
-                                   delay: 0,
-                                   options: UIView.AnimationOptions.curveLinear,
-                                   animations: {
-                                    self.speedRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(10*self.speed))
-                                    self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: CGFloat(2*self.speed)).translatedBy(x: 0, y: -0.5)
-                    })
+                    self.speedIndicatorAction()
+                    self.skylineAction()
                 }
+            }
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+                speedUP += 1
+                self.trend += 50
             }
             RunLoop.current.run(until: Date()+self.timeAnimation)
         }
         DispatchQueue.global().asyncAfter(deadline: .now()+timeAnimation) {
-            Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { timer in
+            self.trend = 0
+            var speedDown = 0
+            Timer.scheduledTimer(withTimeInterval: self.timeIntervalData, repeats: true) { timer in
+                self.speed -= speedDown
                 DispatchQueue.main.async {
-                    self.speed -= 1
-                    self.speedIndicatorSmall.text = "\(self.speed/10)"
-                    self.speedIndicatorPicker.selectRow(10-self.speed%10, inComponent: 0, animated: false)
-                    UIView.animate(withDuration: self.timeInterval,
-                                   delay: 0,
-                                   options: UIView.AnimationOptions.curveLinear,
-                                   animations: {
-                                    self.speedRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(10*self.speed))
-                                    self.trendSpeedUIView.transform = CGAffineTransform(scaleX: 1, y: CGFloat(-2*self.speed)).translatedBy(x: 0, y: -0.5)
-                    })
+                    self.speedIndicatorAction()
+                    self.skylineAction()
                 }
+            }
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+                speedDown += 1
+                self.trend -= 50
             }
             RunLoop.current.run(until: Date()+self.timeAnimation)
         }
+        DispatchQueue.global().asyncAfter(deadline: .now()+timeAnimation*2) {
+            self.trend = 0
+            DispatchQueue.main.async {
+                self.speedIndicatorAction()
+                self.skylineAction()
+            }
+        }
+    }
+    
+    // Действия индикторов скорости
+    func speedIndicatorAction() {
+        self.speedIndicatorSmall.text = "\(self.speed/10)"
+        self.speedIndicatorPicker.selectRow(10-self.speed%10, inComponent: 0, animated: false)
+        self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: CGFloat(self.trend)).translatedBy(x: 0, y: -0.5)
+        UIView.animate(withDuration: self.timeIntervalData,
+                       delay: 0,
+                       options: UIView.AnimationOptions.curveLinear,
+                       animations: {
+                        self.speedRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(10*self.speed))
+        })
     }
 
     // Количество компонентов в PickerView
