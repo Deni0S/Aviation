@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9rounded" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-PS-afH">
-                                <rect key="frame" x="-40" y="24" width="1446" height="980"/>
+                                <rect key="frame" x="-40" y="0.0" width="1446" height="1004"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-H5-hMG" userLabel="Speed">
-                                <rect key="frame" x="100" y="124" width="170" height="780"/>
+                                <rect key="frame" x="100" y="100" width="170" height="804"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McQ-Ab-2zK" userLabel="Speed Ruler UIView">
-                                        <rect key="frame" x="0.0" y="-6790" width="170" height="7202"/>
+                                        <rect key="frame" x="0.0" y="-6778" width="170" height="7202"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speed" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-3m-xvA" userLabel="Ruler">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="7202"/>
@@ -41,7 +39,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-hM-A5T" userLabel="Speed Indicator UIView">
-                                        <rect key="frame" x="0.0" y="345" width="150" height="90"/>
+                                        <rect key="frame" x="0.0" y="357" width="150" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-VU-O5f" userLabel="Indicator">
                                                 <rect key="frame" x="20" y="9" width="80" height="72"/>
@@ -89,7 +87,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1V-Uy-OfR" userLabel="Trend Speed UIView">
-                                        <rect key="frame" x="150" y="389.5" width="20" height="1"/>
+                                        <rect key="frame" x="150" y="401.5" width="20" height="1"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trend" translatesAutoresizingMaskIntoConstraints="NO" id="odD-vh-ssF" userLabel="Trend Speed">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="1"/>
@@ -127,17 +125,175 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-gp-t5r" userLabel="Altimeter">
+                                <rect key="frame" x="1096" y="100" width="170" height="804"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHf-Kg-H34" userLabel="Altimeter Ruler UIView">
+                                        <rect key="frame" x="0.0" y="-13982" width="170" height="14404"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Altimeter" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-eF-u6h" userLabel="Ruler">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="14404"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kBH-eF-u6h" secondAttribute="trailing" id="71B-Nn-f2d"/>
+                                            <constraint firstItem="kBH-eF-u6h" firstAttribute="top" secondItem="aHf-Kg-H34" secondAttribute="top" id="L9R-gg-K6n"/>
+                                            <constraint firstAttribute="width" constant="170" id="kcZ-6N-cdV"/>
+                                            <constraint firstAttribute="height" constant="14404" id="kll-TY-k0c"/>
+                                            <constraint firstItem="kBH-eF-u6h" firstAttribute="leading" secondItem="aHf-Kg-H34" secondAttribute="leading" id="sho-M3-7jK"/>
+                                            <constraint firstAttribute="bottom" secondItem="kBH-eF-u6h" secondAttribute="bottom" id="uon-T3-Nur"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rod-2K-5R5" userLabel="Altimeter Indicator UIView">
+                                        <rect key="frame" x="0.0" y="357" width="170" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKk-do-VXt" userLabel="Indicator">
+                                                <rect key="frame" x="33.5" y="9" width="61.5" height="72"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            </label>
+                                            <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6er-0j-gNe" userLabel="Picker">
+                                                <rect key="frame" x="95" y="0.0" width="75" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" label="ko">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="vxD-re-dov"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWigth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </pickerView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="DKk-do-VXt" firstAttribute="centerY" secondItem="rod-2K-5R5" secondAttribute="centerY" id="C4K-jK-87K"/>
+                                            <constraint firstItem="6er-0j-gNe" firstAttribute="centerY" secondItem="rod-2K-5R5" secondAttribute="centerY" id="Eqj-qI-1c2"/>
+                                            <constraint firstAttribute="height" constant="90" id="HsI-NO-5sW"/>
+                                            <constraint firstAttribute="trailing" secondItem="6er-0j-gNe" secondAttribute="trailing" id="cOg-HQ-5Zb"/>
+                                            <constraint firstAttribute="bottom" secondItem="6er-0j-gNe" secondAttribute="bottom" id="cge-fB-uaR"/>
+                                            <constraint firstItem="6er-0j-gNe" firstAttribute="leading" secondItem="DKk-do-VXt" secondAttribute="trailing" id="mQs-bK-hpw"/>
+                                            <constraint firstItem="6er-0j-gNe" firstAttribute="top" secondItem="rod-2K-5R5" secondAttribute="top" id="mjY-0n-HCg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWigth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16919812819999999" green="0.079263078050000005" blue="0.16220822409999999" alpha="0.32838613010000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="aHf-Kg-H34" secondAttribute="bottom" constant="-20" id="2IZ-Ap-7Cl"/>
+                                    <constraint firstAttribute="trailing" secondItem="rod-2K-5R5" secondAttribute="trailing" id="3gH-SC-Spd"/>
+                                    <constraint firstAttribute="trailing" secondItem="aHf-Kg-H34" secondAttribute="trailing" id="FLd-O7-uBy"/>
+                                    <constraint firstAttribute="width" constant="170" id="TKn-dq-S2Q"/>
+                                    <constraint firstItem="rod-2K-5R5" firstAttribute="centerY" secondItem="Bct-gp-t5r" secondAttribute="centerY" id="j5B-Hb-bgy"/>
+                                    <constraint firstItem="rod-2K-5R5" firstAttribute="leading" secondItem="Bct-gp-t5r" secondAttribute="leading" id="vHW-iS-RFC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWigth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STF-yZ-CKy" userLabel="Variometer">
+                                <rect key="frame" x="1281" y="312" width="70" height="400"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-FI-ClB" userLabel="Altimeter Ruler UIView">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="400"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECi-Dp-xze" userLabel="Arrow Action UIView">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="400"/>
+                                                <subviews>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13T-9d-mdb" userLabel="Arrow UIView">
+                                                        <rect key="frame" x="-170" y="197.5" width="400" height="5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VariometerArrow" translatesAutoresizingMaskIntoConstraints="NO" id="wvc-L1-ebo" userLabel="Arrow">
+                                                                <rect key="frame" x="0.0" y="0.0" width="410" height="5"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="wvc-L1-ebo" firstAttribute="leading" secondItem="13T-9d-mdb" secondAttribute="leading" id="74k-ei-kMM"/>
+                                                            <constraint firstAttribute="height" constant="5" id="Fip-5X-WmW"/>
+                                                            <constraint firstItem="wvc-L1-ebo" firstAttribute="top" secondItem="13T-9d-mdb" secondAttribute="top" id="bmG-WO-Oas"/>
+                                                            <constraint firstAttribute="bottom" secondItem="wvc-L1-ebo" secondAttribute="bottom" id="cub-G8-Ppk"/>
+                                                            <constraint firstAttribute="width" constant="400" id="pSi-IC-mXp"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="13T-9d-mdb" firstAttribute="centerX" secondItem="ECi-Dp-xze" secondAttribute="trailing" id="e1Z-PH-e3u"/>
+                                                    <constraint firstItem="13T-9d-mdb" firstAttribute="centerY" secondItem="ECi-Dp-xze" secondAttribute="centerY" id="hzx-y7-bUU"/>
+                                                    <constraint firstAttribute="width" constant="30" id="jSX-q8-Zan"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Variometer" translatesAutoresizingMaskIntoConstraints="NO" id="VTe-tn-Yel">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="400"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ECi-Dp-xze" secondAttribute="bottom" id="8P3-Yg-hgf"/>
+                                            <constraint firstItem="ECi-Dp-xze" firstAttribute="top" secondItem="MvU-FI-ClB" secondAttribute="top" id="BNN-0I-ShU"/>
+                                            <constraint firstItem="VTe-tn-Yel" firstAttribute="leading" secondItem="MvU-FI-ClB" secondAttribute="leading" id="PE9-T6-mix"/>
+                                            <constraint firstAttribute="trailing" secondItem="ECi-Dp-xze" secondAttribute="trailing" id="k2t-EH-a9I"/>
+                                            <constraint firstItem="VTe-tn-Yel" firstAttribute="top" secondItem="MvU-FI-ClB" secondAttribute="top" id="pjv-Nc-iPV"/>
+                                            <constraint firstAttribute="bottom" secondItem="VTe-tn-Yel" secondAttribute="bottom" id="r2t-ox-uTX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16919812819999999" green="0.079263078050000005" blue="0.16220822409999999" alpha="0.32838613010000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MvU-FI-ClB" firstAttribute="top" secondItem="STF-yZ-CKy" secondAttribute="top" id="K6H-jb-7ba"/>
+                                    <constraint firstAttribute="height" constant="400" id="MFc-aZ-2bz"/>
+                                    <constraint firstAttribute="trailing" secondItem="MvU-FI-ClB" secondAttribute="trailing" id="Z2C-zm-TZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="MvU-FI-ClB" secondAttribute="bottom" id="ko4-T8-jZL"/>
+                                    <constraint firstItem="MvU-FI-ClB" firstAttribute="leading" secondItem="STF-yZ-CKy" secondAttribute="leading" id="lk0-CD-Y2e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWigth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fLn-PS-afH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-40" id="17N-2m-4Ts"/>
+                            <constraint firstItem="STF-yZ-CKy" firstAttribute="leading" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="15" id="19i-4f-qOj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fLn-PS-afH" secondAttribute="bottom" id="2p1-ec-5TK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="100" id="6ET-Zt-ePh"/>
+                            <constraint firstItem="Bct-gp-t5r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6r9-oF-hVa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLn-PS-afH" secondAttribute="trailing" constant="-40" id="78Z-VO-9QI"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QLa-tb-Tqy"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2u-YQ-qKT"/>
                             <constraint firstItem="fLn-PS-afH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAs-lV-egc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DbN-H5-hMG" secondAttribute="bottom" constant="100" id="gkE-ya-gQU"/>
                             <constraint firstItem="fLn-PS-afH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m4m-3S-1wP"/>
+                            <constraint firstItem="STF-yZ-CKy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mcc-lM-HVz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bct-gp-t5r" secondAttribute="bottom" constant="100" id="yjF-Fp-McG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STF-yZ-CKy" secondAttribute="trailing" constant="15" id="z49-J1-urm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -162,6 +318,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="altimeterIndicatorPicker" destination="6er-0j-gNe" id="j1r-bj-K7J"/>
+                        <outlet property="altimeterIndicatorSmall" destination="DKk-do-VXt" id="vPJ-oQ-OL8"/>
+                        <outlet property="altimeterRuler" destination="kBH-eF-u6h" id="9Ly-ev-hdp"/>
+                        <outlet property="altimeterRulerUIView" destination="aHf-Kg-H34" id="wlc-z5-pFn"/>
                         <outlet property="skyline" destination="fLn-PS-afH" id="9kT-EA-BQ3"/>
                         <outlet property="speedIndicatorPicker" destination="635-ky-OlS" id="UaR-DH-Ei2"/>
                         <outlet property="speedIndicatorSmall" destination="NVH-VU-O5f" id="MAT-Cu-j5n"/>
@@ -169,6 +329,7 @@
                         <outlet property="speedRulerUIView" destination="McQ-Ab-2zK" id="HML-fV-5zQ"/>
                         <outlet property="trendSpeed" destination="odD-vh-ssF" id="w0z-jq-hLo"/>
                         <outlet property="trendSpeedUIView" destination="q1V-Uy-OfR" id="YHe-Fy-Vku"/>
+                        <outlet property="variometerArrowView" destination="13T-9d-mdb" id="Yzl-gv-t8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -177,8 +338,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Altimeter" width="85" height="7202"/>
         <image name="Skyline" width="1000" height="500"/>
         <image name="Speed" width="85" height="3601"/>
         <image name="Trend" width="46" height="426.5"/>
+        <image name="Variometer" width="70" height="400"/>
+        <image name="VariometerArrow" width="205" height="5"/>
     </resources>
 </document>
