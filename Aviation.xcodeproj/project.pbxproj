@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032D3477234374A0001F862D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032D3476234374A0001F862D /* Assets.xcassets */; };
 		0343B0A523140E9200470174 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343B0A423140E9200470174 /* UIView+Layer.swift */; };
 		03C134C32309CFC4007A0911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C22309CFC4007A0911 /* AppDelegate.swift */; };
 		03C134C52309CFC4007A0911 /* PFDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C42309CFC4007A0911 /* PFDViewController.swift */; };
 		03C134C82309CFC4007A0911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C62309CFC4007A0911 /* Main.storyboard */; };
-		03C134CA2309CFC6007A0911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C92309CFC6007A0911 /* Assets.xcassets */; };
 		03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */; };
 		03C134D82309CFC6007A0911 /* AviationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134D72309CFC6007A0911 /* AviationTests.swift */; };
 		03C134E32309CFC6007A0911 /* AviationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134E22309CFC6007A0911 /* AviationUITests.swift */; };
@@ -35,12 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032D3476234374A0001F862D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0343B0A423140E9200470174 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		03C134BF2309CFC4007A0911 /* Aviation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C134C22309CFC4007A0911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C134C42309CFC4007A0911 /* PFDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFDViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		03C134C72309CFC4007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		03C134C92309CFC6007A0911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C134CC2309CFC6007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03C134CE2309CFC6007A0911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C134D32309CFC6007A0911 /* AviationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,8 +136,8 @@
 				0343B0A323140BA800470174 /* Controllers */,
 				0343B0A723141C3D00470174 /* Wi-Fi */,
 				0343B0A223140B8100470174 /* Helpers */,
-				03C134C92309CFC6007A0911 /* Assets.xcassets */,
 				03C134CE2309CFC6007A0911 /* Info.plist */,
+				032D3476234374A0001F862D /* Assets.xcassets */,
 			);
 			path = Aviation;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */,
-				03C134CA2309CFC6007A0911 /* Assets.xcassets in Resources */,
+				032D3477234374A0001F862D /* Assets.xcassets in Resources */,
 				03C134C82309CFC4007A0911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

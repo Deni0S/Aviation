@@ -20,7 +20,7 @@
                                 <rect key="frame" x="-1439" y="-1610" width="4244" height="4244"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-PS-afH">
-                                        <rect key="frame" x="0.0" y="0.0" width="4244" height="4244"/>
+                                        <rect key="frame" x="1061" y="1061" width="2122" height="2122"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -102,7 +102,7 @@
                                         <rect key="frame" x="150" y="401.5" width="20" height="1"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trend" translatesAutoresizingMaskIntoConstraints="NO" id="odD-vh-ssF" userLabel="Trend Speed">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="1"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="1.0000000000001137"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -238,7 +238,7 @@
                                                         <rect key="frame" x="-170" y="197.5" width="400" height="5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VariometerArrow" translatesAutoresizingMaskIntoConstraints="NO" id="wvc-L1-ebo" userLabel="Arrow">
-                                                                <rect key="frame" x="0.0" y="0.0" width="410" height="5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="205" height="5"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
@@ -257,7 +257,7 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Variometer" translatesAutoresizingMaskIntoConstraints="NO" id="VTe-tn-Yel">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="400"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="400"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -290,18 +290,54 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKN-Th-IeX" userLabel="Roll">
+                                <rect key="frame" x="383" y="177" width="600" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roll" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-Mx-zEY">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="CLs-LA-dWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="CtC-Mx-zEY" secondAttribute="trailing" id="H1Q-ZF-L5c"/>
+                                    <constraint firstAttribute="height" constant="300" id="RcT-SR-2Xu"/>
+                                    <constraint firstItem="CtC-Mx-zEY" firstAttribute="leading" secondItem="lKN-Th-IeX" secondAttribute="leading" id="frY-Z7-Wov"/>
+                                    <constraint firstAttribute="bottom" secondItem="CtC-Mx-zEY" secondAttribute="bottom" id="frg-Rw-Xz1"/>
+                                    <constraint firstItem="CtC-Mx-zEY" firstAttribute="top" secondItem="lKN-Th-IeX" secondAttribute="top" id="wJq-VG-aHP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxF-Q1-AcD" userLabel="Wing">
+                                <rect key="frame" x="433" y="477" width="500" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wing" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-zf-mJK">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="70"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fxZ-zf-mJK" firstAttribute="leading" secondItem="JxF-Q1-AcD" secondAttribute="leading" id="6Dr-cc-euu"/>
+                                    <constraint firstAttribute="height" constant="70" id="XyJ-8R-wg1"/>
+                                    <constraint firstAttribute="trailing" secondItem="fxZ-zf-mJK" secondAttribute="trailing" id="ifA-SE-v8Y"/>
+                                    <constraint firstItem="fxZ-zf-mJK" firstAttribute="top" secondItem="JxF-Q1-AcD" secondAttribute="top" id="r34-L1-Cfc"/>
+                                    <constraint firstAttribute="bottom" secondItem="fxZ-zf-mJK" secondAttribute="bottom" id="twp-hc-WRY"/>
+                                    <constraint firstAttribute="width" constant="500" id="uu6-Ho-0Vm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="STF-yZ-CKy" firstAttribute="leading" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="15" id="19i-4f-qOj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="100" id="6ET-Zt-ePh"/>
                             <constraint firstItem="Bct-gp-t5r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6r9-oF-hVa"/>
+                            <constraint firstItem="JxF-Q1-AcD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AK9-Ub-bJA"/>
+                            <constraint firstItem="lKN-Th-IeX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jad-cR-qSm"/>
                             <constraint firstItem="r3U-Lr-hFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KED-2t-xsb"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QLa-tb-Tqy"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2u-YQ-qKT"/>
+                            <constraint firstItem="fxZ-zf-mJK" firstAttribute="top" secondItem="lKN-Th-IeX" secondAttribute="bottom" id="Vx2-ke-KQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DbN-H5-hMG" secondAttribute="bottom" constant="100" id="gkE-ya-gQU"/>
                             <constraint firstItem="r3U-Lr-hFS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jEJ-dn-VhU"/>
                             <constraint firstItem="STF-yZ-CKy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mcc-lM-HVz"/>
+                            <constraint firstItem="JxF-Q1-AcD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qa6-9R-oTb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bct-gp-t5r" secondAttribute="bottom" constant="100" id="yjF-Fp-McG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STF-yZ-CKy" secondAttribute="trailing" constant="15" id="z49-J1-urm"/>
                         </constraints>
@@ -311,9 +347,9 @@
                                 <exclude reference="DbN-H5-hMG"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="gkE-ya-gQU"/>
                                 <exclude reference="QLa-tb-Tqy"/>
                                 <exclude reference="V2u-YQ-qKT"/>
-                                <exclude reference="gkE-ya-gQU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -321,9 +357,9 @@
                                 <include reference="DbN-H5-hMG"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="gkE-ya-gQU"/>
                                 <include reference="QLa-tb-Tqy"/>
                                 <include reference="V2u-YQ-qKT"/>
-                                <include reference="gkE-ya-gQU"/>
                             </mask>
                         </variation>
                     </view>
@@ -345,15 +381,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="-197"/>
+            <point key="canvasLocation" x="-212.15226939970717" y="-197.4609375"/>
         </scene>
     </scenes>
     <resources>
         <image name="Altimeter" width="85" height="7202"/>
+        <image name="Roll" width="600" height="300"/>
         <image name="Skyline" width="2122" height="2122"/>
         <image name="Speed" width="85" height="3601"/>
         <image name="Trend" width="46" height="426.5"/>
         <image name="Variometer" width="70" height="400"/>
         <image name="VariometerArrow" width="205" height="5"/>
+        <image name="Wing" width="500" height="70"/>
     </resources>
 </document>
