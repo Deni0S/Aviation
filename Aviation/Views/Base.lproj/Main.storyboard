@@ -8,22 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PFD View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PFDViewController" customModule="Aviation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" userLabel="PFD View Controller" customClass="PFDViewController" customModule="Aviation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC" userLabel="PFD">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-PS-afH">
-                                <rect key="frame" x="-40" y="0.0" width="1446" height="1004"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3U-Lr-hFS" userLabel="Skyline">
+                                <rect key="frame" x="-1439" y="-1610" width="4244" height="4244"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skyline" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-PS-afH">
+                                        <rect key="frame" x="0.0" y="0.0" width="4244" height="4244"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4244" id="Vor-md-D37"/>
+                                    <constraint firstItem="fLn-PS-afH" firstAttribute="centerX" secondItem="r3U-Lr-hFS" secondAttribute="centerX" id="WWt-D4-qHq"/>
+                                    <constraint firstItem="fLn-PS-afH" firstAttribute="centerY" secondItem="r3U-Lr-hFS" secondAttribute="centerY" id="ZmG-AI-o0l"/>
+                                    <constraint firstAttribute="width" constant="4244" id="i7e-cw-hDx"/>
+                                </constraints>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-H5-hMG" userLabel="Speed">
                                 <rect key="frame" x="100" y="100" width="170" height="804"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McQ-Ab-2zK" userLabel="Speed Ruler UIView">
-                                        <rect key="frame" x="0.0" y="-6778" width="170" height="7202"/>
+                                        <rect key="frame" x="0.0" y="-6777" width="170" height="7202"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speed" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-3m-xvA" userLabel="Ruler">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="7202"/>
@@ -106,7 +118,7 @@
                                 <color key="backgroundColor" red="0.16919812817258884" green="0.079263078052738301" blue="0.16220822413329813" alpha="0.32838613013698637" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="q1V-Uy-OfR" firstAttribute="centerY" secondItem="DbN-H5-hMG" secondAttribute="centerY" id="3Oj-pt-UfF"/>
-                                    <constraint firstAttribute="centerY" secondItem="McQ-Ab-2zK" secondAttribute="bottom" constant="-22" id="45q-4H-SVh"/>
+                                    <constraint firstAttribute="centerY" secondItem="McQ-Ab-2zK" secondAttribute="bottom" constant="-23" id="45q-4H-SVh"/>
                                     <constraint firstAttribute="trailing" secondItem="q1V-Uy-OfR" secondAttribute="trailing" id="K31-mu-h3n"/>
                                     <constraint firstAttribute="trailing" secondItem="McQ-Ab-2zK" secondAttribute="trailing" id="YPl-VZ-0xb"/>
                                     <constraint firstItem="tkV-hM-A5T" firstAttribute="centerY" secondItem="DbN-H5-hMG" secondAttribute="centerY" id="fhf-6m-TfY"/>
@@ -131,7 +143,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHf-Kg-H34" userLabel="Altimeter Ruler UIView">
                                         <rect key="frame" x="0.0" y="-13982" width="170" height="14404"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Altimeter" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-eF-u6h" userLabel="Ruler">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier=" " image="Altimeter" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-eF-u6h" userLabel="Ruler">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="14404"/>
                                             </imageView>
                                         </subviews>
@@ -176,6 +188,7 @@
                                             <constraint firstItem="DKk-do-VXt" firstAttribute="centerY" secondItem="rod-2K-5R5" secondAttribute="centerY" id="C4K-jK-87K"/>
                                             <constraint firstItem="6er-0j-gNe" firstAttribute="centerY" secondItem="rod-2K-5R5" secondAttribute="centerY" id="Eqj-qI-1c2"/>
                                             <constraint firstAttribute="height" constant="90" id="HsI-NO-5sW"/>
+                                            <constraint firstItem="DKk-do-VXt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rod-2K-5R5" secondAttribute="leading" constant="20" symbolic="YES" id="LlU-s8-3sV"/>
                                             <constraint firstAttribute="trailing" secondItem="6er-0j-gNe" secondAttribute="trailing" id="cOg-HQ-5Zb"/>
                                             <constraint firstAttribute="bottom" secondItem="6er-0j-gNe" secondAttribute="bottom" id="cge-fB-uaR"/>
                                             <constraint firstItem="6er-0j-gNe" firstAttribute="leading" secondItem="DKk-do-VXt" secondAttribute="trailing" id="mQs-bK-hpw"/>
@@ -280,17 +293,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fLn-PS-afH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-40" id="17N-2m-4Ts"/>
                             <constraint firstItem="STF-yZ-CKy" firstAttribute="leading" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="15" id="19i-4f-qOj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fLn-PS-afH" secondAttribute="bottom" id="2p1-ec-5TK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="100" id="6ET-Zt-ePh"/>
                             <constraint firstItem="Bct-gp-t5r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6r9-oF-hVa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLn-PS-afH" secondAttribute="trailing" constant="-40" id="78Z-VO-9QI"/>
+                            <constraint firstItem="r3U-Lr-hFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KED-2t-xsb"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QLa-tb-Tqy"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2u-YQ-qKT"/>
-                            <constraint firstItem="fLn-PS-afH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAs-lV-egc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DbN-H5-hMG" secondAttribute="bottom" constant="100" id="gkE-ya-gQU"/>
-                            <constraint firstItem="fLn-PS-afH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m4m-3S-1wP"/>
+                            <constraint firstItem="r3U-Lr-hFS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jEJ-dn-VhU"/>
                             <constraint firstItem="STF-yZ-CKy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mcc-lM-HVz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bct-gp-t5r" secondAttribute="bottom" constant="100" id="yjF-Fp-McG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STF-yZ-CKy" secondAttribute="trailing" constant="15" id="z49-J1-urm"/>
@@ -323,6 +333,7 @@
                         <outlet property="altimeterRuler" destination="kBH-eF-u6h" id="9Ly-ev-hdp"/>
                         <outlet property="altimeterRulerUIView" destination="aHf-Kg-H34" id="wlc-z5-pFn"/>
                         <outlet property="skyline" destination="fLn-PS-afH" id="9kT-EA-BQ3"/>
+                        <outlet property="skylineUIView" destination="r3U-Lr-hFS" id="iXv-E7-wjp"/>
                         <outlet property="speedIndicatorPicker" destination="635-ky-OlS" id="UaR-DH-Ei2"/>
                         <outlet property="speedIndicatorSmall" destination="NVH-VU-O5f" id="MAT-Cu-j5n"/>
                         <outlet property="speedRuler" destination="PGM-3m-xvA" id="rsN-Xa-eQ6"/>
@@ -334,12 +345,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-299.5607613469985" y="-210.3515625"/>
+            <point key="canvasLocation" x="-212" y="-197"/>
         </scene>
     </scenes>
     <resources>
         <image name="Altimeter" width="85" height="7202"/>
-        <image name="Skyline" width="1000" height="500"/>
+        <image name="Skyline" width="2122" height="2122"/>
         <image name="Speed" width="85" height="3601"/>
         <image name="Trend" width="46" height="426.5"/>
         <image name="Variometer" width="70" height="400"/>

@@ -31,16 +31,13 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     @IBOutlet weak var variometerArrowView: UIView!
     @IBOutlet weak var skyline: UIImageView!
+    @IBOutlet weak var skylineUIView: UIView!
     
-    var timeIntervalData: Double = 0.1
-    var timeAnimation: Double = 14
-    var speed: Int = 0
-    var trend: Double = 0.0
-    var altimeter: Int = 0
-    var variometer: Int = 0
+    var timeIntervalData: Double = 0.1, timeAnimation: Double = 21
+    var speed: Int = 0, speedTrend: Double = 0.0, speedPicker: [String] = ["0","9","8","7","6","5","4","3","2","1","0","9"]
+    var altimeter: Int = 0, variometer: Int = 0, altimeterPicker: [String] = ["000","990","980","970","960","950","940","930","920","910","900","890","880","870","860","850","840","830","820","810","800","790","780","770","760","750","740","730","720","710","700","690","680","670","660","650","640","630","620","610","600","590","580","570","560","550","540","530","520","510","500","490","480","470","460","450","440","430","420","410","400","390","380","370","360","350","340","330","320","310","300","290","280","270","260","250","240","230","220","210","200","190","190","170","160","150","140","130","120","110","100","090","080","070","060","050","040","030","020","010","000"]
     var radian: Double = 0.0
-    var speedPicker: [String] = ["0","9","8","7","6","5","4","3","2","1","0","9"]
-    var altimeterPicker: [String] = ["000","990","980","970","960","950","940","930","920","910","900","890","880","870","860","850","840","830","820","810","800","790","780","770","760","750","740","730","720","710","700","690","680","670","660","650","640","630","620","610","600","590","580","570","560","550","540","530","520","510","500","490","480","470","460","450","440","430","420","410","400","390","380","370","360","350","340","330","320","310","300","290","280","270","260","250","240","230","220","210","200","190","190","170","160","150","140","130","120","110","100","090","080","070","060","050","040","030","020","010","000"]
+    var skylinePitch: Int = 0, skylineRoll: Double = 0.0, skylineYaw: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +52,15 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     // Запустить демонстрацию работы PFD
     func demoActionPFD() {
+        var speedChanges = 0
+        var altimeterChanges = 0
+        var skylinePitchChanges = 0
         // Взлет
         DispatchQueue.global().async {
-            var speedUP = 0
-            var altimeterUP = 0
             Timer.scheduledTimer(withTimeInterval: self.timeIntervalData, repeats: true) { timer in
-                self.speed += speedUP
-                self.altimeter += altimeterUP
+                self.speed += speedChanges
+                self.altimeter += altimeterChanges
+                self.skylinePitch = skylinePitchChanges
                 DispatchQueue.main.async {
                     self.speedIndicatorAction()
                     self.skylineAction()
@@ -70,22 +69,27 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             }
             // Ускорение
             Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
-                speedUP += 1
-                self.trend += 50
-                altimeterUP += 20
-                self.variometer += 5
+                speedChanges += 1
+                self.speedTrend += 50
+                // Скорость взлета
+                if self.speed > 80 {
+                    altimeterChanges += 20
+                    skylinePitchChanges += 40
+                    self.variometer += 5
+                    // Скорость начала маневрирования
+                    if self.speed > 170 {
+                        self.skylineRoll += 0.2
+                    }
+                }
             }
             RunLoop.current.run(until: Date()+self.timeAnimation)
         }
         // Посадка
         DispatchQueue.global().asyncAfter(deadline: .now()+timeAnimation) {
-            var speedDown = 0
-            self.trend = 0
-            var altimeterDown = 0
-            self.variometer = 0
             Timer.scheduledTimer(withTimeInterval: self.timeIntervalData, repeats: true) { timer in
-                self.speed -= speedDown
-                self.altimeter -= altimeterDown
+                self.speed += speedChanges
+                self.altimeter += altimeterChanges
+                self.skylinePitch = skylinePitchChanges
                 DispatchQueue.main.async {
                     self.speedIndicatorAction()
                     self.skylineAction()
@@ -94,19 +98,38 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             }
             // Замедление
             Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
-                speedDown += 1
-                self.trend -= 50
-                altimeterDown += 20
-                self.variometer -= 5
+                speedChanges -= 1
+                self.speedTrend -= 50
+                // Скорость касания земли
+                if self.speed > 340 {
+                    altimeterChanges -= 20
+                    skylinePitchChanges -= 40
+                    self.variometer -= 5
+                    // Скорость конца маневрирования
+                    if self.speed > 460 {
+                        self.skylineRoll -= 0.1
+                    } else {
+                        self.skylineRoll = 0
+                    }
+                } else {
+                    self.variometer = 0
+                    self.skylinePitch = 0
+                    altimeterChanges = 0
+                    skylinePitchChanges = 0
+                }
             }
+            speedChanges = 0
+            self.speedTrend = 0
+            altimeterChanges = 0
+            self.variometer = 0
+            self.skylineRoll = 0.0
             RunLoop.current.run(until: Date()+self.timeAnimation)
         }
         // Остановка
-        DispatchQueue.global().asyncAfter(deadline: .now()+timeAnimation*2) {
+        DispatchQueue.global().asyncAfter(deadline: .now()+timeAnimation*2+1) {
             self.speed = 0
-            self.trend = 0
+            self.speedTrend = 0
             self.altimeter = 0
-            self.variometer = 0
             DispatchQueue.main.async {
                 self.speedIndicatorAction()
                 self.skylineAction()
@@ -119,7 +142,7 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func speedIndicatorAction() {
         self.speedIndicatorSmall.text = "\(self.speed/10)"
         self.speedIndicatorPicker.selectRow(10-self.speed%10, inComponent: 0, animated: false)
-        self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: CGFloat(self.trend)).translatedBy(x: 0, y: -0.5)
+        self.trendSpeedUIView.transform = CGAffineTransform (scaleX: 1, y: CGFloat(self.speedTrend)).translatedBy(x: 0, y: -0.5)
         UIView.animate(withDuration: self.timeIntervalData,
                        delay: 0,
                        options: UIView.AnimationOptions.curveLinear,
@@ -155,7 +178,7 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                        options: UIView.AnimationOptions.curveLinear,
                        animations: {
                         self.altimeterRulerUIView.transform = CGAffineTransform(translationX: 0, y: CGFloat(12*self.altimeter/10))
-                        self.variometerArrowView.transform = CGAffineTransform(rotationAngle: CGFloat(.pi*self.variometerInRadian()/6))//self.variometerInRadian()/6
+                        self.variometerArrowView.transform = CGAffineTransform(rotationAngle: CGFloat(.pi*self.variometerInRadian()/6))
         })
     }
 
@@ -207,7 +230,12 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     // Движение линии горизонта
     func skylineAction() {
+        UIView.animate(withDuration: self.timeIntervalData*10,
+                       delay: 0,
+                       options: UIView.AnimationOptions.curveLinear,
+                       animations: {
+                        self.skylineUIView.transform = CGAffineTransform(rotationAngle: CGFloat(.pi*self.skylineRoll/6)).concatenating(CGAffineTransform(translationX: 0, y: CGFloat(self.skylinePitch)))
+        })
     }
-    
 }
 
