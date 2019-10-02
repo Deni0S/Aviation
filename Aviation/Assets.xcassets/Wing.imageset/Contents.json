@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Skyline@1.png",
+      "filename" : "Wing@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Skyline@2x.png",
+      "filename" : "Wing@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Skyline@3x.png",
+      "filename" : "Wing@3x.png",
       "scale" : "3x"
     }
   ],
