@@ -290,20 +290,59 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKN-Th-IeX" userLabel="Roll">
-                                <rect key="frame" x="383" y="177" width="600" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKN-Th-IeX" userLabel="RollScale">
+                                <rect key="frame" x="383" y="102" width="600" height="375"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roll" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-Mx-zEY">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RollScale" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-Mx-zEY" userLabel="RollScale">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="CLs-LA-dWa"/>
                                     <constraint firstAttribute="trailing" secondItem="CtC-Mx-zEY" secondAttribute="trailing" id="H1Q-ZF-L5c"/>
-                                    <constraint firstAttribute="height" constant="300" id="RcT-SR-2Xu"/>
+                                    <constraint firstAttribute="height" constant="375" id="RcT-SR-2Xu"/>
                                     <constraint firstItem="CtC-Mx-zEY" firstAttribute="leading" secondItem="lKN-Th-IeX" secondAttribute="leading" id="frY-Z7-Wov"/>
-                                    <constraint firstAttribute="bottom" secondItem="CtC-Mx-zEY" secondAttribute="bottom" id="frg-Rw-Xz1"/>
                                     <constraint firstItem="CtC-Mx-zEY" firstAttribute="top" secondItem="lKN-Th-IeX" secondAttribute="top" id="wJq-VG-aHP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBo-gy-vTA" userLabel="Roll">
+                                <rect key="frame" x="658" y="147" width="50" height="730"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RollPointer" translatesAutoresizingMaskIntoConstraints="NO" id="iqm-af-n0o">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="42"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yaw" translatesAutoresizingMaskIntoConstraints="NO" id="4Es-Yj-3hM">
+                                        <rect key="frame" x="0.0" y="44" width="50" height="15"/>
+                                    </imageView>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0x-mx-i0x" userLabel="Pitch">
+                                        <rect key="frame" x="-125" y="62.5" width="300" height="605"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pitch" translatesAutoresizingMaskIntoConstraints="NO" id="M4I-6B-WO5" userLabel="Pitch">
+                                                <rect key="frame" x="0.0" y="-797.5" width="300" height="2200"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="M4I-6B-WO5" firstAttribute="centerY" secondItem="l0x-mx-i0x" secondAttribute="centerY" id="Tg2-Q9-cDa"/>
+                                            <constraint firstAttribute="height" constant="605" id="kJJ-q9-UfX"/>
+                                            <constraint firstItem="M4I-6B-WO5" firstAttribute="centerX" secondItem="l0x-mx-i0x" secondAttribute="centerX" id="snD-nQ-PxV"/>
+                                            <constraint firstAttribute="width" constant="300" id="xKS-3T-wYi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3bu-1g-vIc"/>
+                                    <constraint firstItem="l0x-mx-i0x" firstAttribute="centerX" secondItem="zBo-gy-vTA" secondAttribute="centerX" id="7PX-cw-pdM"/>
+                                    <constraint firstItem="4Es-Yj-3hM" firstAttribute="centerX" secondItem="zBo-gy-vTA" secondAttribute="centerX" id="9Y1-rY-Dji"/>
+                                    <constraint firstItem="iqm-af-n0o" firstAttribute="centerX" secondItem="zBo-gy-vTA" secondAttribute="centerX" id="EBs-YL-6SR"/>
+                                    <constraint firstItem="l0x-mx-i0x" firstAttribute="centerY" secondItem="zBo-gy-vTA" secondAttribute="centerY" id="Ogb-aw-cvh"/>
+                                    <constraint firstAttribute="height" constant="730" id="Syg-wE-S7x"/>
+                                    <constraint firstItem="4Es-Yj-3hM" firstAttribute="top" secondItem="iqm-af-n0o" secondAttribute="bottom" constant="2" id="fbh-ET-aUx"/>
+                                    <constraint firstItem="iqm-af-n0o" firstAttribute="top" secondItem="zBo-gy-vTA" secondAttribute="top" id="pb1-l7-dxk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxF-Q1-AcD" userLabel="Wing">
@@ -326,12 +365,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="STF-yZ-CKy" firstAttribute="leading" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="15" id="19i-4f-qOj"/>
+                            <constraint firstItem="zBo-gy-vTA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5ZQ-8v-54D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bct-gp-t5r" secondAttribute="trailing" constant="100" id="6ET-Zt-ePh"/>
                             <constraint firstItem="Bct-gp-t5r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6r9-oF-hVa"/>
                             <constraint firstItem="JxF-Q1-AcD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AK9-Ub-bJA"/>
                             <constraint firstItem="lKN-Th-IeX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jad-cR-qSm"/>
                             <constraint firstItem="r3U-Lr-hFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KED-2t-xsb"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QLa-tb-Tqy"/>
+                            <constraint firstItem="zBo-gy-vTA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UmT-hS-h3J"/>
                             <constraint firstItem="DbN-H5-hMG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V2u-YQ-qKT"/>
                             <constraint firstItem="fxZ-zf-mJK" firstAttribute="top" secondItem="lKN-Th-IeX" secondAttribute="bottom" id="Vx2-ke-KQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DbN-H5-hMG" secondAttribute="bottom" constant="100" id="gkE-ya-gQU"/>
@@ -347,9 +388,9 @@
                                 <exclude reference="DbN-H5-hMG"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="gkE-ya-gQU"/>
                                 <exclude reference="QLa-tb-Tqy"/>
                                 <exclude reference="V2u-YQ-qKT"/>
+                                <exclude reference="gkE-ya-gQU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -357,9 +398,9 @@
                                 <include reference="DbN-H5-hMG"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="gkE-ya-gQU"/>
                                 <include reference="QLa-tb-Tqy"/>
                                 <include reference="V2u-YQ-qKT"/>
+                                <include reference="gkE-ya-gQU"/>
                             </mask>
                         </variation>
                     </view>
@@ -368,6 +409,8 @@
                         <outlet property="altimeterIndicatorSmall" destination="DKk-do-VXt" id="vPJ-oQ-OL8"/>
                         <outlet property="altimeterRuler" destination="kBH-eF-u6h" id="9Ly-ev-hdp"/>
                         <outlet property="altimeterRulerUIView" destination="aHf-Kg-H34" id="wlc-z5-pFn"/>
+                        <outlet property="pitch" destination="M4I-6B-WO5" id="tua-Vi-o4z"/>
+                        <outlet property="rollPointerUIView" destination="zBo-gy-vTA" id="JWE-cw-yap"/>
                         <outlet property="skyline" destination="fLn-PS-afH" id="9kT-EA-BQ3"/>
                         <outlet property="skylineUIView" destination="r3U-Lr-hFS" id="iXv-E7-wjp"/>
                         <outlet property="speedIndicatorPicker" destination="635-ky-OlS" id="UaR-DH-Ei2"/>
@@ -377,6 +420,7 @@
                         <outlet property="trendSpeed" destination="odD-vh-ssF" id="w0z-jq-hLo"/>
                         <outlet property="trendSpeedUIView" destination="q1V-Uy-OfR" id="YHe-Fy-Vku"/>
                         <outlet property="variometerArrowView" destination="13T-9d-mdb" id="Yzl-gv-t8Z"/>
+                        <outlet property="yaw" destination="4Es-Yj-3hM" id="ydL-oy-ypA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -386,12 +430,15 @@
     </scenes>
     <resources>
         <image name="Altimeter" width="85" height="7202"/>
-        <image name="Roll" width="600" height="300"/>
+        <image name="Pitch" width="300" height="2200"/>
+        <image name="RollPointer" width="50" height="42"/>
+        <image name="RollScale" width="600" height="300"/>
         <image name="Skyline" width="2122" height="2122"/>
         <image name="Speed" width="85" height="3601"/>
         <image name="Trend" width="46" height="426.5"/>
         <image name="Variometer" width="70" height="400"/>
         <image name="VariometerArrow" width="205" height="5"/>
         <image name="Wing" width="500" height="70"/>
+        <image name="Yaw" width="50" height="15"/>
     </resources>
 </document>

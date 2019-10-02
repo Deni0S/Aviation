@@ -32,6 +32,9 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var variometerArrowView: UIView!
     @IBOutlet weak var skyline: UIImageView!
     @IBOutlet weak var skylineUIView: UIView!
+    @IBOutlet weak var rollPointerUIView: UIView!
+    @IBOutlet weak var yaw: UIImageView!
+    @IBOutlet weak var pitch: UIImageView!
     
     var timeIntervalData: Double = 0.1, timeAnimation: Double = 21
     var speed: Int = 0, speedTrend: Double = 0.0, speedPicker: [String] = ["0","9","8","7","6","5","4","3","2","1","0","9"]
@@ -80,6 +83,12 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                     if self.speed > 170 {
                         self.skylineRoll += 0.2
                     }
+                    // Скорость рысканья
+                    if self.speed > 290 && self.speed < 440  {
+                        self.skylineYaw += 20
+                    } else {
+                        self.skylineYaw = 0
+                    }
                 }
             }
             RunLoop.current.run(until: Date()+self.timeAnimation)
@@ -111,6 +120,12 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                     } else {
                         self.skylineRoll = 0
                     }
+                    // Скорость рысканья
+                    if self.speed > 550 {
+                        self.skylineYaw -= 20
+                    } else {
+                        self.skylineYaw = 0.0
+                    }
                 } else {
                     self.variometer = 0
                     self.skylinePitch = 0
@@ -123,6 +138,7 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             altimeterChanges = 0
             self.variometer = 0
             self.skylineRoll = 0.0
+            self.skylineYaw = 0.0
             RunLoop.current.run(until: Date()+self.timeAnimation)
         }
         // Остановка
@@ -235,6 +251,9 @@ class PFDViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                        options: UIView.AnimationOptions.curveLinear,
                        animations: {
                         self.skylineUIView.transform = CGAffineTransform(rotationAngle: CGFloat(.pi*self.skylineRoll/6)).concatenating(CGAffineTransform(translationX: 0, y: CGFloat(self.skylinePitch)))
+                        self.rollPointerUIView.transform = CGAffineTransform(rotationAngle: CGFloat(.pi*self.skylineRoll/6))
+                        self.yaw.transform = CGAffineTransform(translationX: CGFloat(self.skylineYaw), y: 0)
+                        self.pitch.transform = CGAffineTransform(translationX: 0, y: CGFloat(self.skylinePitch))
         })
     }
 }
