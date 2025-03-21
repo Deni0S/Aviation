@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,26 +13,7 @@
 		03C134C52309CFC4007A0911 /* PFDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C42309CFC4007A0911 /* PFDViewController.swift */; };
 		03C134C82309CFC4007A0911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C62309CFC4007A0911 /* Main.storyboard */; };
 		03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */; };
-		03C134D82309CFC6007A0911 /* AviationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134D72309CFC6007A0911 /* AviationTests.swift */; };
-		03C134E32309CFC6007A0911 /* AviationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134E22309CFC6007A0911 /* AviationUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		03C134D42309CFC6007A0911 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03C134B72309CFC4007A0911 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03C134BE2309CFC4007A0911;
-			remoteInfo = Aviation;
-		};
-		03C134DF2309CFC6007A0911 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03C134B72309CFC4007A0911 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03C134BE2309CFC4007A0911;
-			remoteInfo = Aviation;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		032D3476234374A0001F862D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,12 +24,7 @@
 		03C134C72309CFC4007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03C134CC2309CFC6007A0911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03C134CE2309CFC6007A0911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03C134D32309CFC6007A0911 /* AviationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C134D72309CFC6007A0911 /* AviationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviationTests.swift; sourceTree = "<group>"; };
-		03C134D92309CFC6007A0911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03C134DE2309CFC6007A0911 /* AviationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C134E22309CFC6007A0911 /* AviationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviationUITests.swift; sourceTree = "<group>"; };
-		03C134E42309CFC6007A0911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776E8A9224D0ADEF009948E7 /* Aviation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aviation.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,61 +35,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C134D02309CFC6007A0911 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C134DB2309CFC6007A0911 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0343B0A123140B7100470174 /* Views */ = {
+		034A186B2D8CB0C800B6420A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */,
 				03C134C62309CFC4007A0911 /* Main.storyboard */,
+				03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */,
+				032D3476234374A0001F862D /* Assets.xcassets */,
+				03C134CE2309CFC6007A0911 /* Info.plist */,
+				776E8A9224D0ADEF009948E7 /* Aviation.entitlements */,
 			);
-			path = Views;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		0343B0A223140B8100470174 /* Helpers */ = {
+		034A186C2D8CB15A00B6420A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				03C134C22309CFC4007A0911 /* AppDelegate.swift */,
 				0343B0A423140E9200470174 /* UIView+Layer.swift */,
 			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		0343B0A323140BA800470174 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				03C134C42309CFC4007A0911 /* PFDViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		0343B0A723141C3D00470174 /* Wi-Fi */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Wi-Fi";
+			path = App;
 			sourceTree = "<group>";
 		};
 		03C134B62309CFC4007A0911 = {
 			isa = PBXGroup;
 			children = (
 				03C134C12309CFC4007A0911 /* Aviation */,
-				03C134D62309CFC6007A0911 /* AviationTests */,
-				03C134E12309CFC6007A0911 /* AviationUITests */,
 				03C134C02309CFC4007A0911 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				03C134BF2309CFC4007A0911 /* Aviation.app */,
-				03C134D32309CFC6007A0911 /* AviationTests.xctest */,
-				03C134DE2309CFC6007A0911 /* AviationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,33 +78,11 @@
 		03C134C12309CFC4007A0911 /* Aviation */ = {
 			isa = PBXGroup;
 			children = (
-				03C134C22309CFC4007A0911 /* AppDelegate.swift */,
-				0343B0A123140B7100470174 /* Views */,
-				0343B0A323140BA800470174 /* Controllers */,
-				0343B0A723141C3D00470174 /* Wi-Fi */,
-				0343B0A223140B8100470174 /* Helpers */,
-				03C134CE2309CFC6007A0911 /* Info.plist */,
-				032D3476234374A0001F862D /* Assets.xcassets */,
+				034A186C2D8CB15A00B6420A /* App */,
+				034A186B2D8CB0C800B6420A /* Resources */,
+				03C134C42309CFC4007A0911 /* PFDViewController.swift */,
 			);
 			path = Aviation;
-			sourceTree = "<group>";
-		};
-		03C134D62309CFC6007A0911 /* AviationTests */ = {
-			isa = PBXGroup;
-			children = (
-				03C134D72309CFC6007A0911 /* AviationTests.swift */,
-				03C134D92309CFC6007A0911 /* Info.plist */,
-			);
-			path = AviationTests;
-			sourceTree = "<group>";
-		};
-		03C134E12309CFC6007A0911 /* AviationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				03C134E22309CFC6007A0911 /* AviationUITests.swift */,
-				03C134E42309CFC6007A0911 /* Info.plist */,
-			);
-			path = AviationUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,62 +105,19 @@
 			productReference = 03C134BF2309CFC4007A0911 /* Aviation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03C134D22309CFC6007A0911 /* AviationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03C134EA2309CFC6007A0911 /* Build configuration list for PBXNativeTarget "AviationTests" */;
-			buildPhases = (
-				03C134CF2309CFC6007A0911 /* Sources */,
-				03C134D02309CFC6007A0911 /* Frameworks */,
-				03C134D12309CFC6007A0911 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03C134D52309CFC6007A0911 /* PBXTargetDependency */,
-			);
-			name = AviationTests;
-			productName = AviationTests;
-			productReference = 03C134D32309CFC6007A0911 /* AviationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		03C134DD2309CFC6007A0911 /* AviationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03C134ED2309CFC6007A0911 /* Build configuration list for PBXNativeTarget "AviationUITests" */;
-			buildPhases = (
-				03C134DA2309CFC6007A0911 /* Sources */,
-				03C134DB2309CFC6007A0911 /* Frameworks */,
-				03C134DC2309CFC6007A0911 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03C134E02309CFC6007A0911 /* PBXTargetDependency */,
-			);
-			name = AviationUITests;
-			productName = AviationUITests;
-			productReference = 03C134DE2309CFC6007A0911 /* AviationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		03C134B72309CFC4007A0911 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Денис Баринов";
 				TargetAttributes = {
 					03C134BE2309CFC4007A0911 = {
 						CreatedOnToolsVersion = 10.3;
-					};
-					03C134D22309CFC6007A0911 = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = 03C134BE2309CFC4007A0911;
-					};
-					03C134DD2309CFC6007A0911 = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = 03C134BE2309CFC4007A0911;
 					};
 				};
 			};
@@ -253,8 +135,6 @@
 			projectRoot = "";
 			targets = (
 				03C134BE2309CFC4007A0911 /* Aviation */,
-				03C134D22309CFC6007A0911 /* AviationTests */,
-				03C134DD2309CFC6007A0911 /* AviationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,20 +147,6 @@
 				03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */,
 				032D3477234374A0001F862D /* Assets.xcassets in Resources */,
 				03C134C82309CFC4007A0911 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C134D12309CFC6007A0911 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C134DC2309CFC6007A0911 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,36 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C134CF2309CFC6007A0911 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03C134D82309CFC6007A0911 /* AviationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C134DA2309CFC6007A0911 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03C134E32309CFC6007A0911 /* AviationUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		03C134D52309CFC6007A0911 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03C134BE2309CFC4007A0911 /* Aviation */;
-			targetProxy = 03C134D42309CFC6007A0911 /* PBXContainerItemProxy */;
-		};
-		03C134E02309CFC6007A0911 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03C134BE2309CFC4007A0911 /* Aviation */;
-			targetProxy = 03C134DF2309CFC6007A0911 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03C134C62309CFC4007A0911 /* Main.storyboard */ = {
@@ -352,6 +189,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -374,6 +212,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -385,6 +224,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -413,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -435,6 +276,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -446,6 +288,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -468,15 +311,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Aviation/Resources/Aviation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = Aviation/Info.plist;
+				INFOPLIST_FILE = Aviation/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BDI.Aviation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -486,99 +331,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Aviation/Resources/Aviation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = Aviation/Info.plist;
+				INFOPLIST_FILE = Aviation/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BDI.Aviation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		03C134EB2309CFC6007A0911 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = AviationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BDI.AviationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviation.app/Aviation";
-			};
-			name = Debug;
-		};
-		03C134EC2309CFC6007A0911 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = AviationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BDI.AviationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviation.app/Aviation";
-			};
-			name = Release;
-		};
-		03C134EE2309CFC6007A0911 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = AviationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BDI.AviationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Aviation;
-			};
-			name = Debug;
-		};
-		03C134EF2309CFC6007A0911 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJ69ZFHT28;
-				INFOPLIST_FILE = AviationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BDI.AviationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Aviation;
 			};
 			name = Release;
 		};
@@ -599,24 +364,6 @@
 			buildConfigurations = (
 				03C134E82309CFC6007A0911 /* Debug */,
 				03C134E92309CFC6007A0911 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03C134EA2309CFC6007A0911 /* Build configuration list for PBXNativeTarget "AviationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03C134EB2309CFC6007A0911 /* Debug */,
-				03C134EC2309CFC6007A0911 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03C134ED2309CFC6007A0911 /* Build configuration list for PBXNativeTarget "AviationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03C134EE2309CFC6007A0911 /* Debug */,
-				03C134EF2309CFC6007A0911 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
