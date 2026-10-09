@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		032D3477234374A0001F862D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032D3476234374A0001F862D /* Assets.xcassets */; };
 		0343B0A523140E9200470174 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343B0A423140E9200470174 /* UIView+Layer.swift */; };
+		0366BF5730795D1400108046 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0366BF5530795D1400108046 /* README.md */; };
+		0366BF5830795D1400108046 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0366BF5430795D1400108046 /* LICENSE */; };
+		0366BF5930795D1400108046 /* README.RU.md in Resources */ = {isa = PBXBuildFile; fileRef = 0366BF5630795D1400108046 /* README.RU.md */; };
 		03C134C32309CFC4007A0911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C22309CFC4007A0911 /* AppDelegate.swift */; };
 		03C134C52309CFC4007A0911 /* PFDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C134C42309CFC4007A0911 /* PFDViewController.swift */; };
 		03C134C82309CFC4007A0911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C134C62309CFC4007A0911 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		032D3476234374A0001F862D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0343B0A423140E9200470174 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		0366BF5430795D1400108046 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		0366BF5530795D1400108046 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		0366BF5630795D1400108046 /* README.RU.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.RU.md; sourceTree = SOURCE_ROOT; };
 		03C134BF2309CFC4007A0911 /* Aviation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C134C22309CFC4007A0911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C134C42309CFC4007A0911 /* PFDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFDViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -41,6 +47,9 @@
 		034A186B2D8CB0C800B6420A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0366BF5430795D1400108046 /* LICENSE */,
+				0366BF5530795D1400108046 /* README.md */,
+				0366BF5630795D1400108046 /* README.RU.md */,
 				03C134C62309CFC4007A0911 /* Main.storyboard */,
 				03C134CB2309CFC6007A0911 /* LaunchScreen.storyboard */,
 				032D3476234374A0001F862D /* Assets.xcassets */,
@@ -146,6 +155,9 @@
 			files = (
 				03C134CD2309CFC6007A0911 /* LaunchScreen.storyboard in Resources */,
 				032D3477234374A0001F862D /* Assets.xcassets in Resources */,
+				0366BF5730795D1400108046 /* README.md in Resources */,
+				0366BF5830795D1400108046 /* LICENSE in Resources */,
+				0366BF5930795D1400108046 /* README.RU.md in Resources */,
 				03C134C82309CFC4007A0911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJ69ZFHT28;
 				INFOPLIST_FILE = Aviation/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJ69ZFHT28;
 				INFOPLIST_FILE = Aviation/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
