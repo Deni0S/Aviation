@@ -1,8 +1,8 @@
-# Attitude Indicator Module / PFD **[🇷🇺 Rus](./README.RU.md)**
+# Attitude Indicator Module / PFD
 [![Status](https://img.shields.io/badge/status-deprecated-red)](#)
-[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey)](#)
-[![Language](https://img.shields.io/badge/language-Swift-orange)](#)
+[![Purpose](https://img.shields.io/badge/purpose-educational%20%2F%20history-blue)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Year](https://img.shields.io/badge/year-2019-lightgrey)](#)
 
 > **This project is no longer maintained.**
 > It is kept as an educational subproject for reference and historical purposes.
